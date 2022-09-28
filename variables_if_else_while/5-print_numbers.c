@@ -8,7 +8,7 @@ int main(void)
 {
 	int Wii;
 
-	for (Wii = '0'; Wii <= '9';Wii++)
+	for (Wii = '0'; Wii <= '9'; Wii++)
 		putchar (Wii);
 	putchar ('\n');
 	return (0);
