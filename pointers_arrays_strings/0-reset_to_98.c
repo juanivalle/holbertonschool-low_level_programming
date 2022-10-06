@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * reset_to_98 - task0
- * @*n: int
+ * @n: int
  * Return: always 0
  */
 void reset_to_98(int *n)
