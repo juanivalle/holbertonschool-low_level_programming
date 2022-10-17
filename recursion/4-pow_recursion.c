@@ -1,6 +1,6 @@
 #include "main.h"
-/*
- * _pow_recursion - task4
+/**
+ * _pow_recursion- task4
  * @x: int
  * @y: int
  * Return: always 0
