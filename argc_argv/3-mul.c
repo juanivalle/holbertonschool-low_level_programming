@@ -9,11 +9,17 @@ int main(int argc, char *argv[])
 {
 	int total;
 
-	if (argc < 2)
+	if (argc != 3)
 	{
+		printf("error\n");
 		return (1);
 	}
-	total = (int) *argv[1] * (int) *argv[2];
-	printf("%d\n", total);
+	else
+	{
+		int x = atoi(argv[1]);
+		int y = atoi(argv[2]);
+		total = (x * y);
+			printf("%d\n", total);
+	}
 	return (0);
 }
