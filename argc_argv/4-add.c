@@ -7,23 +7,22 @@
  */
 int main(int argc, char *argv[])
 {
-	int x;
-	int y;
-	int suma;
 
-	suma = 0;
-	for (x = 0; x < argc; x++)
+	int a, sum = 0;
+
+	if (argc < 1)
+		return (0);
+
+	for (a = 1; a < argc; a++)
 	{
-		for (y = 0; argv[x][y] != '\0'; y++)
+		if (!atoi(argv[a]))
 		{
-			if (!isdigit(argv[x][y]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("%s\n", "Error");
+			return (1);
 		}
-	suma += atoi(argv[x]);
+		sum += atoi(argv[a]);
 	}
-	printf("%d\n", suma);
+	printf("%d\n", sum);
+
 	return (0);
 }
