@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *str_concat - task2
+ * str_concat - function that concatenates two strings
  * @s1: char
  * @s2: char
  * Return: always 0
@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 	}
-	else if (s2 == NULL)
+	if (s2 == NULL)
 	{
 		s2 = "";
 	}
