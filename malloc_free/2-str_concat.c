@@ -30,6 +30,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (s3);
 	}
+	else if (s3 == NULL && s4 == NULL)
+	{
+		return (NULL);
+	}
 	for (a = 0; a <= strlen(s1) + 1; a++)
 	{
 		s3[a] = s1[a];
@@ -40,5 +44,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	s3 = strcat(s3, s4);
 	return (s3);
-	free(s3);
 }
