@@ -26,7 +26,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s3 != NULL && s4 != NULL)
 	{
 		if (n == 0)
+		{
 			return (s3);
+		}
 		else
 		{
 			for (a = 0; a <= strlen(s1) + 1; a++)
