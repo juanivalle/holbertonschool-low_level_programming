@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (b = 0; b <= n; b++)
 			s4[b] = s2[b];
 		}
-		if (n > strlen(s2))
+		else if (n > strlen(s2))
 		{
 			n = strlen(s2);
 		s3 = strcat(s3, s4);
