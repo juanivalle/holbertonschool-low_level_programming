@@ -1,39 +1,42 @@
 #include "main.h"
 /**
- * *string_nconcat - task1
- * @s1: char
- * @s2: char
- * @n: int
- * Return: always 0
- */
+* *string_nconcat - concatenates two string
+*@s1:string1
+*@s2:string2
+*@n:q of char
+*Return: always 0
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s3;
-	char *s4;
-	unsigned int a;
-	unsigned int b;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s1 == NULL)
-	{
-		return ("");
-	}
-	if (s2 == NULL)
-	{
-		return ("");
-	}
-	s3 = malloc(sizeof(char) * strlen(s1) + 2 - 1);
-	s4 = malloc(sizeof(char) * n);
-	if (s3 != NULL && s4 != NULL)
-	{
-		for (a = 0; a <= strlen(s1) + 1; a++)
-			s3[a] = s1[a];
-		for (b = 0; b <= n; b++)
-			s4[b] = s2[b];
-		s3 = strcat(s3, s4);
-		{
-		if (s3 == NULL)
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (!s)
 		return (NULL);
-		}
+
+	while (i < len1)
+	{
+		s[i] = s1[i];
+		i++;
 	}
-	return (s3);
+
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
+
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
+
+	s[i] = '\0';
+
+	return (s);
 }
