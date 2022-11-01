@@ -1,7 +1,7 @@
 #ifndef _DOG_H_
 #define _DOG_H_
 
-#include <stdio.hu>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  *struct dog - task0
