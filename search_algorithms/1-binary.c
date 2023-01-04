@@ -8,28 +8,23 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int inicio = 0;
-	int final;
-	int medio;
-	int pos;
-	int largo = size;
+	int inicio = 0, medio, pos;
+	int final = size - 1;
 
 	if (array == NULL)
 		return (-1);
-
-	printf("Searching in array: ");
-	for (pos = 0; pos < largo; pos++)
+	while (inicio <= final)
 	{
-		if (pos != inicio)
-			printf(", %d", array[pos]);
-		else
-			printf("%d", array[pos]);
-	}
-		printf("\n");
-		final = pos - 1;
-		while (inicio <= final)
+		medio = (inicio + final) / 2;
+		printf("Searching in array: ");
+		for (pos = inicio; pos <= final; pos++)
 		{
-			medio = (inicio + final) / 2;
+			if (pos != inicio)
+				printf(", %d", array[pos]);
+			else
+				printf("%d", array[pos]);
+		}
+			printf("\n");
 			if (array[medio] == value)
 			{
 				pos = medio;
@@ -38,14 +33,10 @@ int binary_search(int *array, size_t size, int value)
 			else
 			{
 				if (value < array[medio])
-				{
 					final = medio - 1;
-				}
 				else
-				{
 					inicio = medio + 1;
-				}
 			}
-		}
+	}
 	return (-1);
 }
